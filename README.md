@@ -121,6 +121,7 @@ price: "decimal", Price field will be ignored for market orders. Market orders g
 - orderMethod: "enum", "limit", "market" or "stoplimit"
 - orderType: "enum", "buy", "sell"
 - pairSymbol: "string", ex: "BTCTRY", "ETHTRY"
+
 return String message
 ```
 System.out.println(BtcTurk.SetConstants(API_PUBLIC_KEY,API_PRIVATE_KEY).SumbitOrder(0.1,200,0,"limit","buy","LINK_TRY"));
