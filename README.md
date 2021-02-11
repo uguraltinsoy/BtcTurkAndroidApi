@@ -1,4 +1,4 @@
-# BtcTurkAndroidApi
+# BtcTurk Android Api
 
 ## Download
 ### AndroidManifest
