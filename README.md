@@ -17,7 +17,7 @@ allprojects {
 ```
 ```
 dependencies {
-	implementation 'com.github.uguraltinsoy:BtcTurkAndroidApi:0.1.0'
+	implementation 'com.github.uguraltinsoy:BtcTurkAndroidApi:0.1.1'
 }
 ```
 or Maven:
@@ -33,7 +33,7 @@ or Maven:
 <dependency>
 	<groupId>com.github.uguraltinsoy</groupId>
 	<artifactId>BtcTurkAndroidApi</artifactId>
-	<version>Tag</version>
+	<version>0.1.1</version>
 </dependency>
 ```
 
