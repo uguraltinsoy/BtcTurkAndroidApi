@@ -633,5 +633,3 @@ public class BtcTurk {
     }
 
 }
-
-
