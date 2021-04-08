@@ -40,20 +40,20 @@ or Maven:
 ## Usage
 ### Public API Methods
 #### Ticker
-```
+```java
 ArrayList<Ticker> tickers = BtcTurk.Ticker();
 for (Ticker in : tickers){
     System.out.println(in.getPair());
 }
 ```
-```
+```java
 ArrayList<Ticker> tickers = BtcTurk.Ticker("BTC_TRY");
 for (Ticker in : tickers){
     System.out.println(in.getPair());
 }
 ```
 #### Trades
-```
+```java
 ArrayList<Trades> trades = BtcTurk.Trades("BTC_TRY",50);
 for(Trades in : trades){
     System.out.println(in.getPair() + " " + in.getPrice());
@@ -61,25 +61,25 @@ for(Trades in : trades){
 ```
 ### Private API Methods
 #### Transactions
-```
+```java
 ArrayList<Transactions> userTransactions = BtcTurk.SetConstants(API_PUBLIC_KEY,API_PRIVATE_KEY).UserTransactions();
 for (Transactions in : userTransactions){
     System.out.println(in.getId());
 }
 ```
-```
+```java
 ArrayList<Transactions> userTypeTransactions = BtcTurk.SetConstants(API_PUBLIC_KEY,API_PRIVATE_KEY).UserTypeTransactions("buy"); // buy-sell
 for (Transactions in : userTypeTransactions){
     System.out.println(in.getId());
 }
 ```
-```
+```java
 ArrayList<Transactions> userTypeAndSymbolTransactions = BtcTurk.SetConstants(API_PUBLIC_KEY,API_PRIVATE_KEY).UserTypeAndSymbolTransactions("buy","usdt"); // buy-sell , usdt-btc-try...
 for (Transactions in : userTypeAndSymbolTransactions){
     System.out.println(in.getId());
 }
 ```
-```
+```java
 ArrayList<Transactions> transactions = BtcTurk.SetConstants(API_PUBLIC_KEY,API_PRIVATE_KEY).UserSymbolTransactions("usdt"); // usdt-btc-try...
 for (Transactions in : transactions){
     System.out.println(in.getId());
@@ -87,28 +87,28 @@ for (Transactions in : transactions){
 ```
 #### Open Orders
 Asks Result:
-```
+```java
 ArrayList<OpenOrders> openOrdersAsks = BtcTurk.SetConstants(API_PUBLIC_KEY,API_PRIVATE_KEY).OpenOrders("BTC_TRY").get(0);
 for (OpenOrders in : openOrdersAsks){
     System.out.println(in.getId());
 }
 ```
 Bids Result:
-```
+```java
 ArrayList<OpenOrders> openOrdersBids = BtcTurk.SetConstants(API_PUBLIC_KEY,API_PRIVATE_KEY).OpenOrders("BTC_TRY").get(1);
 for (OpenOrders in : openOrdersBids){
     System.out.println(in.getId());
 }
 ```
 #### All Orders
-```
+```java
 ArrayList<AllOrders> allOrders = BtcTurk.SetConstants(API_PUBLIC_KEY,API_PRIVATE_KEY).AllOrders("BTC_TRY");
 for (AllOrders in : allOrders){
     System.out.println(in.getId());
 }
 ```
 #### Account Balance
-```
+```java
 ArrayList<Balance> balances = BtcTurk.SetConstants(API_PUBLIC_KEY,API_PRIVATE_KEY).getBalance();
 for (Balance in : balances){
     System.out.println(in.getAsset() + " " + in.getBalance());
@@ -123,7 +123,7 @@ price: "decimal", Price field will be ignored for market orders. Market orders g
 - pairSymbol: "string", ex: "BTCTRY", "ETHTRY"
 
 return String message
-```
+```java
 System.out.println(BtcTurk.SetConstants(API_PUBLIC_KEY,API_PRIVATE_KEY).SumbitOrder(0.1,200,0,"limit","buy","LINK_TRY"));
 ```
 
