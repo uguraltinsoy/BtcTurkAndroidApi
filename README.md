@@ -136,6 +136,7 @@ BTC  : 1N7V3wX4xvGfwgBP1zQrcMSxohKKfiDxyH
 ETH  : 0x0df6da87e219fb4854e933f1071ad91d17afa517
 XRP  : rEb8TK3gBgk5auZkwc6sHnwrGVJH8DuaLh
 DOGE : DKKmSHAa8GhAE5HNjmCXzkXPKTjpybY3mq
+DENT : 0x0df6da87e219fb4854e933f1071ad91d17afa517
 ```
 
 ### Social
